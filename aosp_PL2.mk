@@ -19,10 +19,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 #nherit from PL2 device
 $(call inherit-product, device/nokia/PL2/device.mk)
+
+#HYCON OS 
+HYCON_BUILD_TYPE := OFFICIAL
+
+# Inherit some common aosp stuff.
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -35,7 +46,7 @@ TARGET_OTA_ASSERT_DEVICE := PL2,PL2_sprout,Plate2
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_NAME := lineage_PL2
+PRODUCT_NAME := aosp_PL2
 PRODUCT_DEVICE := PL2
 PRODUCT_MANUFACTURER := HMD Global
 PRODUCT_BRAND := Nokia

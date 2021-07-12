@@ -15,10 +15,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_PL2.mk
+    $(LOCAL_DIR)/aosp_PL2.mk \
+    $(LOCAL_DIR)/evolution_PL2.mk \
 
 COMMON_LUNCH_CHOICES := \
     aosp_PL2-eng \
     aosp_PL2-user \
-    aosp_PL2-userdebug
-
+    aosp_PL2-userdebug \
+    evolution_PL2-eng \
+    evolution_PL2-user \
+    evolution_PL2-userdebug
